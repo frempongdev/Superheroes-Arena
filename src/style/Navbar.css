@@ -1,27 +1,6 @@
-.navbar-open {
-    opacity: 1;
-    position: fixed;
-    /* border: solid red; */
-    height: 99vh;
-    width: 15%;
-    background-color: rgb(62, 62, 62);
-    transition: all 1s;
-}
-
-.navbar-close {
-    opacity: 0;
-    position: fixed;
-    transform: translateX(-191px);
-    /* border: solid red; */
-    height: 99vh;
-    width: 15%;
-    background-color: rgb(62, 62, 62);
-    transition: all 1s;
-}
-
 .top {
-    color: white;
-    float: right;
-    margin: 9% 5% 0% 0%;
-    font-size: 1.01rem;
+  color: white;
+  float: right;
+  margin: 9% 5% 0% 0%;
+  font-size: 1.01rem;
 }
