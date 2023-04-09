@@ -23,6 +23,12 @@
   left: 1%;
   height: 30px;
   width: auto;
-  color: white;
+  color: rgb(159, 159, 159);
   z-index: 99;
+  transition: all 0.5s;
+}
+
+.menu-icon:hover {
+  color: white;
+
 }
