@@ -1,6 +1,5 @@
 .hero {
     min-height: 99vh;
-    border: solid red;
     background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.02)), url("../assets/superheroes.png");
     background-repeat: no-repeat;
     background-position: center;
