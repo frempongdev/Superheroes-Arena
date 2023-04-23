@@ -1,4 +1,19 @@
 .main {
     height: 99vh;
     color: white;
+    border: white solid;
+}
+
+.search-box {
+    /* border: red solid; */
+    margin-top: 2%;
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+}
+
+.input {
+    padding: 0.5%;
+    border-radius: 10px;
+    text-align: center;
 }
