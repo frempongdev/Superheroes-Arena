@@ -1,6 +1,6 @@
 import '../style/Search.css';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react'; // import useState hook
+import { useState } from 'react';
 import { searchHero } from '../redux/navbar/SearchSlice';
 
 const Search = () => {
@@ -13,7 +13,7 @@ const Search = () => {
   };
 
   return (
-    <div className="main">
+    <div className="main" id="search">
       <div className="search-box">
         <input type="text" className="input" placeholder="Search your SuperHero..." value={inputValue} onChange={handleInputChange} />
       </div>

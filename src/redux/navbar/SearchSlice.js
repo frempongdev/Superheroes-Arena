@@ -6,9 +6,10 @@ const initialState = {
 
 export const searchHero = createAsyncThunk('search/searchHero', async (input) => {
   const url = `https://superheroapi.com/api/10223015174750967/search/${input}`;
-  const response = await fetch(url, { mode: 'cors' });
+  // const response = await fetch(url, { mode: 'no-cors' });
+  const response = await fetch(url);
+  console.log(url, response);
   const data = await response.json();
-  console.log(data);
   return data;
 });
 

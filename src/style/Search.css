@@ -2,6 +2,7 @@
     height: 99vh;
     color: white;
     border: white solid;
+    transition: all 0.3s ease-in-out;
 }
 
 .search-box {
