@@ -1,16 +1,25 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
+// const apiUrl = 'https://superheroapi.com/api/10223015174750967/search/batma';
+// const corsUrl = 'https://cors.bridged.cc/';
+
 const initialState = {
   searched: [],
+  isSearching: false,
 };
 
 export const searchHero = createAsyncThunk('search/searchHero', async (input) => {
-  const url = `https://superheroapi.com/api/10223015174750967/search/${input}`;
-  // const response = await fetch(url, { mode: 'no-cors' });
+  const url = 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json';
+  console.log(url);
   const response = await fetch(url);
-  console.log(url, response);
   const data = await response.json();
-  return data;
+  // console.log(data);
+  console.log(input);
+  const searchResults = data.filter(
+    (hero) => hero.name.toLowerCase().includes(input.toLowerCase()),
+  );
+  console.log(searchResults);
+  return searchResults;
 });
 
 const searchSlice = createSlice({
@@ -19,7 +28,10 @@ const searchSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(searchHero.fulfilled, (state, action) => ({ ...state, searched: action.payload }));
+      .addCase(searchHero.pending, (state) => ({ ...state, isSearching: true }))
+      .addCase(searchHero.fulfilled, (state, action) => (
+        { ...state, isSearching: false, searched: action.payload }))
+      .addCase(searchHero.rejected, (state) => ({ ...state, isSearching: false }));
   },
 
 });
