@@ -10,15 +10,15 @@ const initialState = {
 
 export const searchHero = createAsyncThunk('search/searchHero', async (input) => {
   const url = 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json';
-  console.log(url);
+  // console.log(url);
   const response = await fetch(url);
   const data = await response.json();
   // console.log(data);
-  console.log(input);
+  // console.log(input);
   const searchResults = data.filter(
     (hero) => hero.name.toLowerCase().includes(input.toLowerCase()),
   );
-  console.log(searchResults);
+  // console.log(searchResults);
   return searchResults;
 });
 
