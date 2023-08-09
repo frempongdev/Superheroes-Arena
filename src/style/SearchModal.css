@@ -1,0 +1,33 @@
+.modal-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 99vh;
+    background-color: rgb(67, 67, 67, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.sea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    /* border: red solid; */
+    color: white;
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+.hero-box {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.hero-box p {
+    margin: 0%;
+}
