@@ -1,5 +1,5 @@
 .main {
-  height: 99vh;
+  min-height: 10vh;
   color: white;
   border: white solid;
   transition: all 0.3s ease-in-out;
