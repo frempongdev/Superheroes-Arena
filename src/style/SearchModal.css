@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .sea {
@@ -19,6 +20,7 @@
   max-height: 40vh;
   max-width: 80%;
   overflow-x: scroll;
+  margin-bottom: 3vh;
 }
 
 ::-webkit-scrollbar {
@@ -68,4 +70,17 @@
   width: 10vw;
   height: 15vw;
   text-shadow: 2px 2px 0 rgba(0, 0, 0);
+}
+
+.close-search {
+  font-size: 4vh;
+  color: rgb(181, 0, 0, 0.5);
+  transition: all 0.4s;
+}
+
+.close-search:hover {
+  transform: scale(1.5);
+  color: rgb(181, 0, 0);
+  z-index: 99;
+
 }

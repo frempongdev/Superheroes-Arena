@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import '../style/SearchModal.css';
 import React from 'react';
+import { IoMdCloseCircle } from 'react-icons/io';
 
 const SearchModal = () => {
   const { searched } = useSelector((state) => state.search);
@@ -25,7 +26,7 @@ const SearchModal = () => {
             }
           </div>
         </div>
-
+        <IoMdCloseCircle className="close-search" onClick={() => { searched.length = 0; }} />
       </div>
 
       )}
