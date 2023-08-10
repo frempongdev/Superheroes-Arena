@@ -1,21 +1,30 @@
 .main {
   min-height: 10vh;
   color: white;
-  border: white solid;
+  border: rgb(200, 200, 200) solid;
+  border-left: none;
+  border-right: none;
   transition: all 0.3s ease-in-out;
 }
 
 .search-box {
-  /* border: red solid; */
   margin-top: 2%;
-
-  /* margin: auto; */
   display: flex;
   justify-content: center;
+  gap: 0.7vh;
 }
 
 .input {
-  padding: 0.5%;
-  border-radius: 10px;
+  padding: 1vh;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
   text-align: center;
+}
+
+.submit {
+  padding: 1vh;
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  background-color: rgba(148, 148, 148, 0.5);
+  color: white;
 }
