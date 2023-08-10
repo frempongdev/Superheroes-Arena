@@ -18,7 +18,7 @@
   color: white;
   max-height: 40vh;
   max-width: 80%;
-  overflow-y: scroll;
+  overflow-x: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -42,15 +42,22 @@
 .results {
   width: 100%;
   display: flex;
-  gap: 1.5%;
+  gap: 1vh;
 }
 
 .hero-box {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
+  transition: all 0.5s cubic-bezier(0.58, 1.37, 1, 0.99);
 }
+
+.hero-box:hover {
+  transform: scale(1.5);
+  z-index: 99;
+}
+
 
 .hero-desc p {
   margin: 0%;
