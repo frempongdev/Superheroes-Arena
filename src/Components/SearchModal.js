@@ -15,8 +15,7 @@ const SearchModal = () => {
             {
             searched.map((oneHero) => (
               <div className="hero-box" key={oneHero.id}>
-                <img src={oneHero.images.xs} alt="hero-pic" />
-                <div className="hero-desc">
+                <div className="hero-desc" style={{ backgroundImage: `url(${oneHero.images.sm})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                   <p>{oneHero.name}</p>
                   <span>&#9733;</span>
                   <span>{Math.floor(Math.random() * 6)}</span>
