@@ -25,7 +25,12 @@ export const searchHero = createAsyncThunk('search/searchHero', async (input) =>
 const searchSlice = createSlice({
   name: 'search',
   initialState,
-  reducers: {},
+  reducers: {
+    clearSearch: (state) => {
+      // eslint-disable-next-line no-param-reassign
+      state.searched = [];
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(searchHero.pending, (state) => ({ ...state, isSearching: true }))
@@ -33,7 +38,7 @@ const searchSlice = createSlice({
         { ...state, isSearching: false, searched: action.payload }))
       .addCase(searchHero.rejected, (state) => ({ ...state, isSearching: false }));
   },
-
 });
 
+export const { clearSearch } = searchSlice.actions;
 export default searchSlice.reducer;
