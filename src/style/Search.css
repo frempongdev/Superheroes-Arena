@@ -17,14 +17,14 @@
 .input {
   padding: 1vh;
   border: none;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0 0 10px;
   text-align: center;
 }
 
 .submit {
   padding: 1vh;
   border: none;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0 10px 10px 0;
   background-color: rgba(148, 148, 148, 0.5);
   color: white;
 }

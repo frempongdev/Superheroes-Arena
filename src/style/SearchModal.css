@@ -64,7 +64,6 @@
   z-index: 99;
 }
 
-
 .hero-desc p {
   margin: 0%;
   background-color: rgb(11, 11, 11, 0.5);
@@ -87,5 +86,4 @@
   transform: scale(1.5);
   color: rgb(181, 0, 0);
   z-index: 99;
-
 }
