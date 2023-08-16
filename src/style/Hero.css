@@ -1,5 +1,5 @@
 .hero {
-  min-height: 99vh;
+  min-height: 110vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.02)), url("../assets/superheroes.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -7,10 +7,4 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-}
-
-.down-box {
-  /* color: aliceblue; */
-
-  /* border: green solid; */
 }
