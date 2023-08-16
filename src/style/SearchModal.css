@@ -25,7 +25,7 @@
 
 ::-webkit-scrollbar {
   width: 0;
-  height: 0;
+  height: 1.2vh;
 }
 
 ::-webkit-scrollbar-track {
@@ -33,7 +33,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(120, 120, 120, 0.5);
+  background: rgba(221, 221, 221, 0.5);
   border-radius: 2px;
 }
 
