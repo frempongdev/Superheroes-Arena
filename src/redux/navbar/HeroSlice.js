@@ -4,7 +4,7 @@ export const fetchHero = createAsyncThunk('hero/fetchHero', async (id) => {
   const url = `https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/id/${id}.json`;
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   // console.log(url);
   return data;
 });
@@ -17,7 +17,12 @@ const initialState = {
 const heroSlice = createSlice({
   name: 'hero',
   initialState,
-  reducers: {},
+  reducers: {
+    clearFetch: (state) => {
+      // eslint-disable-next-line no-param-reassign
+      state.heroDetails = {};
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchHero.pending, (state) => ({ ...state, isLoading: true }))
@@ -27,4 +32,5 @@ const heroSlice = createSlice({
   },
 });
 
+export const { clearFetch } = heroSlice.actions;
 export default heroSlice.reducer;
