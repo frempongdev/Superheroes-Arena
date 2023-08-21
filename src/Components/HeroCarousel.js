@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../style/HeroCarousel.css';
 
 const HeroCarousel = () => (
@@ -18,13 +19,15 @@ const HeroCarousel = () => (
       <span />
       Compare Heroes
     </button>
-    <button type="button" className="hero-button">
-      <span />
-      <span />
-      <span />
-      <span />
-      New Page
-    </button>
+    <Link to="/all-heroes">
+      <button type="button" className="hero-button">
+        <span />
+        <span />
+        <span />
+        <span />
+        All Heroes
+      </button>
+    </Link>
   </div>
 );
 
