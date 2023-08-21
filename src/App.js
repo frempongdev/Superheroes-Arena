@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar';
 import { toggleNav } from './redux/navbar/NavbarSlice';
 import Hero from './Components/Hero';
 import HeroPage from './Components/HeroPage';
+import AllHeroes from './Components/AllHeroes';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,6 +18,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Hero />} />
+          <Route path="/all-heroes" exact element={<AllHeroes />} />
           <Route path="/hero/:oneHeroId" exact element={<HeroPage />} />
         </Routes>
       </div>
