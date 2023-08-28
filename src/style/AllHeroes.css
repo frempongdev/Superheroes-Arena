@@ -1,6 +1,7 @@
 .all-heroes-wrapper {
-    display: flex;
-    /* justify-content: center; */
-    flex-wrap: wrap;
-    gap: 5vh;
+  display: flex;
+
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 5vh;
 }
