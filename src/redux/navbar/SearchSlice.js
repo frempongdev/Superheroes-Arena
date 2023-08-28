@@ -5,6 +5,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   searched: [],
+  allHeroes: [],
   isSearching: false,
 };
 
@@ -22,6 +23,13 @@ export const searchHero = createAsyncThunk('search/searchHero', async (input) =>
   return searchResults;
 });
 
+export const fetchAllHeroes = createAsyncThunk('search/fetchAllHeroes', async () => {
+  const url = 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json';
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+});
+
 const searchSlice = createSlice({
   name: 'search',
   initialState,
@@ -36,7 +44,11 @@ const searchSlice = createSlice({
       .addCase(searchHero.pending, (state) => ({ ...state, isSearching: true }))
       .addCase(searchHero.fulfilled, (state, action) => (
         { ...state, isSearching: false, searched: action.payload }))
-      .addCase(searchHero.rejected, (state) => ({ ...state, isSearching: false }));
+      .addCase(searchHero.rejected, (state) => ({ ...state, isSearching: false }))
+      .addCase(fetchAllHeroes.pending, (state) => ({ ...state, isSearching: true }))
+      .addCase(fetchAllHeroes.fulfilled, (state, action) => (
+        { ...state, isSearching: false, allHeroes: action.payload }))
+      .addCase(fetchAllHeroes.rejected, (state) => ({ ...state, isSearching: false }));
   },
 });
 
