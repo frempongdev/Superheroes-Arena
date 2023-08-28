@@ -10,8 +10,8 @@ const PersonalDetails = () => {
   const dispatch = useDispatch();
 
   const handleClearFetch = () => {
-    dispatch(clearFetch());
     history(-1);
+    dispatch(clearFetch());
   };
 
   return (

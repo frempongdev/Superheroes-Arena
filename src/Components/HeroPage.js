@@ -22,10 +22,10 @@ const HeroPage = () => {
         <PersonalDetails />
       </div>
       <div className="other-info">
-        <OtherInfo />
+        <PowerStats />
       </div>
       <div className="power-side">
-        <PowerStats />
+        <OtherInfo />
       </div>
     </div>
   );

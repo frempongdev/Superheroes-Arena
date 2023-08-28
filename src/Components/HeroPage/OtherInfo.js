@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { IoCaretForwardOutline } from 'react-icons/io5';
 
 const OtherInfo = () => {
   const { heroDetails } = useSelector((state) => state.fetchHero);
@@ -102,6 +103,12 @@ const OtherInfo = () => {
             {heroDetails?.biography?.firstAppearance}
           </span>
         </div>
+      </div>
+      <div className="wiki-box">
+        <a href={`https://en.wikipedia.org/wiki/${heroDetails.name}`} className="wiki-link bk-box bbr" target="_blank" rel="noopener noreferrer">
+          <span className="bk-to-srch">Read More</span>
+          <IoCaretForwardOutline className="bk-btn" />
+        </a>
       </div>
     </div>
   );

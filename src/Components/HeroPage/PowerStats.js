@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { IoCaretForwardOutline } from 'react-icons/io5';
 
 const PowerStats = () => {
   const { heroDetails } = useSelector((state) => state.fetchHero);
@@ -8,7 +7,7 @@ const PowerStats = () => {
   return (
     <>
       <div className="stats-wrapper">
-        <h1>PowerStats</h1>
+        <h2>PowerStats</h2>
         <div className="stat-box">
           <div className="bar-box">
             <p className="percent">
@@ -70,12 +69,6 @@ const PowerStats = () => {
           <p className="power">Combat</p>
         </div>
       </div>
-      <a href={`https://en.wikipedia.org/wiki/${heroDetails.name}`} className="wiki-link" target="_blank" rel="noopener noreferrer">
-        <button type="button" className="bk-box bbr">
-          <span className="bk-to-srch">Read More</span>
-          <IoCaretForwardOutline className="bk-btn" />
-        </button>
-      </a>
     </>
   );
 };
