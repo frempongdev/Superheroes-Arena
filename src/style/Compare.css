@@ -1,0 +1,119 @@
+.compare-wrapper {
+  min-height: 99vh;
+  margin-bottom: 5vh;
+  background-image: url(https://raw.githubusercontent.com/frempongdev/Image-Master/main/spup.png);
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-wrapper h1 {
+  text-align: center;
+  color: white;
+  font-size: 4vh;
+}
+
+.deleteHero {
+  color: white;
+}
+
+.compare-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.srch-bx {
+  border-radius: 16px;
+  border: rgb(112, 0, 0) solid 1px;
+  padding: 0.5vw;
+  text-align: center;
+}
+
+.srch-bx::placeholder {
+  text-align: center;
+  color: rgb(110, 0, 0);
+}
+
+.single-Hero {
+  position: relative;
+}
+
+.results-box {
+  position: absolute;
+  max-height: 32.5vh;
+  overflow: scroll;
+  z-index: 100;
+}
+
+.hero-line {
+  display: flex;
+  align-items: center;
+  color: white;
+  border: 1px solid gray;
+  width: 25vh;
+  transition: all 0.5s;
+  height: 5vh;
+  background-color: black;
+}
+
+.hero-line:hover {
+  background-color: ghostwhite;
+  color: rgb(78, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.hero-thumb {
+  height: 100%;
+  margin-right: 1vw;
+}
+
+.heroDisplay {
+  display: flex;
+  gap: 2vh;
+
+  /* max-width: 100%; */
+  justify-content: space-between;
+  transition: all 0.5s;
+}
+
+.cHero-box {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-compare {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.delete-hero {
+  font-size: 180%;
+  color: rgb(247, 0, 0);
+  transition: all 0.5s;
+}
+
+.delete-hero:hover {
+  font-size: 250%;
+  color: rgb(255, 144, 144);
+  cursor: pointer;
+}
+
+.comp-img {
+  height: 65vh;
+  border-top: rgb(112, 0, 0) solid 1px;
+  border-bottom: rgb(112, 0, 0) solid 1px;
+}
+
+.flexx {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 1vh;
+}

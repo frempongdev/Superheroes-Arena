@@ -4,14 +4,13 @@ import { useState } from 'react';
 import { searchHero } from '../redux/navbar/SearchSlice';
 
 const Search = () => {
-  const [inputValue, setInputValue] = useState(''); // use state hook to store input value
+  const [inputValue, setInputValue] = useState('');
 
   const dispatch = useDispatch();
 
   const handleInputSubmit = (e) => {
     e.preventDefault();
-    dispatch(searchHero(inputValue)); // dispatch searchHero with input value
-    setInputValue('');
+    dispatch(searchHero(inputValue));
   };
 
   return (

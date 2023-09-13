@@ -12,13 +12,15 @@ const HeroCarousel = () => (
         Search Hero
       </button>
     </a>
-    <button type="button" className="hero-button">
-      <span />
-      <span />
-      <span />
-      <span />
-      Compare Heroes
-    </button>
+    <Link to="/compare">
+      <button type="button" className="hero-button">
+        <span />
+        <span />
+        <span />
+        <span />
+        Compare Heroes
+      </button>
+    </Link>
     <Link to="/all-heroes">
       <button type="button" className="hero-button">
         <span />
