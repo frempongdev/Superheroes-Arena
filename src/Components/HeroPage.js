@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import '../style/HeroPage.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchHero } from '../redux/navbar/HeroSlice';
 import PersonalDetails from './HeroPage/PersonalDetails';
@@ -10,7 +10,7 @@ import PowerStats from './HeroPage/PowerStats';
 const HeroPage = () => {
   const dispatch = useDispatch();
   const { oneHeroId } = useParams();
-  // const { heroDetails } = useSelector((state) => state.fetchHero);
+  const { heroDetails } = useSelector((state) => state.fetchHero);
 
   useEffect(() => {
     dispatch(fetchHero(oneHeroId));
@@ -22,7 +22,7 @@ const HeroPage = () => {
         <PersonalDetails />
       </div>
       <div className="other-info">
-        <PowerStats />
+        <PowerStats heroDetails={heroDetails} />
       </div>
       <div className="power-side">
         <OtherInfo />
