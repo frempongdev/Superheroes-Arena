@@ -28,6 +28,15 @@ const HeroCarousel = () => (
         All Heroes
       </button>
     </Link>
+    <Link to="/all-heroes">
+      <button type="button" className="hero-button">
+        <span />
+        <span />
+        <span />
+        <span />
+        Hero Ranks
+      </button>
+    </Link>
   </div>
 );
 
