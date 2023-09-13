@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchAllHeroes } from '../redux/navbar/SearchSlice';
 import '../style/AllHeroes.css';
+import { clearFetch } from '../redux/navbar/HeroSlice';
 
 const AllHeroes = () => {
   const { allHeroes } = useSelector((state) => state.search);
@@ -16,7 +17,7 @@ const AllHeroes = () => {
     <div className="all-heroes-wrapper">
       {
             allHeroes.map((oneHero) => (
-              <Link to={`/hero/${oneHero.id}`} key={oneHero.id} className="hero-link">
+              <Link to={`/hero/${oneHero.id}`} key={oneHero.id} className="hero-link" onClick={dispatch(clearFetch())}>
                 <div className="hero-box">
                   <div className="hero-desc" style={{ backgroundImage: `url(${oneHero.images.sm})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                     <p>{oneHero.name}</p>
