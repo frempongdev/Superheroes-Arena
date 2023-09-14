@@ -1,7 +1,9 @@
 .all-heroes-wrapper {
   display: flex;
-
-  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 5vh;
+  background-image: url(https://raw.githubusercontent.com/frempongdev/Image-Master/main/superhero%20backgrounds.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  background-attachment: fixed;
 }
