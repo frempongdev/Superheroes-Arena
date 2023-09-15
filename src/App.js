@@ -8,6 +8,7 @@ import Hero from './Components/Hero';
 import HeroPage from './Components/HeroPage';
 import AllHeroes from './Components/AllHeroes';
 import Compare from './Components/Compare';
+import Ranks from './Components/Ranks';
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Hero />} />
           <Route path="/all-heroes" exact element={<AllHeroes />} />
+          <Route path="/ranks" exact element={<Ranks />} />
           <Route path="/compare" exact element={<Compare />} />
           <Route path="/hero/:oneHeroId" exact element={<HeroPage />} />
         </Routes>
