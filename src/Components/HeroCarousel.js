@@ -30,7 +30,7 @@ const HeroCarousel = () => (
         All Heroes
       </button>
     </Link>
-    <Link to="/all-heroes">
+    <Link to="/ranks">
       <button type="button" className="hero-button">
         <span />
         <span />
