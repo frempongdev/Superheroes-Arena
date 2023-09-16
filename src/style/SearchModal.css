@@ -87,3 +87,22 @@
   color: rgb(181, 0, 0);
   z-index: 99;
 }
+
+@media screen and (max-width: 768px) {
+  .hero-desc {
+    height: 26vw;
+    width: 18vw;
+  }
+
+  .hero-desc p {
+    font-size: 3vw;
+  }
+
+  .hero-desc span {
+    font-size: 3vw;
+  }
+
+  .modal-overlay {
+    top: -30vw;
+  }
+}

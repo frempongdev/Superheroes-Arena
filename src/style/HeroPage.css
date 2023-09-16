@@ -166,3 +166,38 @@
   margin-top: 8vh;
   width: 9vw;
 }
+
+.btn-left {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-page-wrapper {
+    display: block;
+  }
+
+  .hero-pic {
+    height: 123vw;
+  }
+
+  .btn-dwn {
+    display: none;
+  }
+
+  .btn-left {
+    display: flex;
+  }
+
+  .wiki-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .wiki-link {
+    width: 20vw;
+  }
+
+  .ot-wrapper {
+    margin-top: 12vw;
+  }
+}

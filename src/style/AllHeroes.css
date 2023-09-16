@@ -7,3 +7,11 @@
   background-size: 100vw auto;
   background-attachment: fixed;
 }
+
+@media screen and (max-width: 768px) {
+  .all-heroes-wrapper {
+    gap: 3vw 2vw;
+    margin-top: 3vw;
+    margin-left: 1vw;
+  }
+}

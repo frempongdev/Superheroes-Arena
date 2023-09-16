@@ -1,9 +1,18 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { IoCaretForwardOutline } from 'react-icons/io5';
+import { IoCaretForwardOutline, IoCaretBackOutline } from 'react-icons/io5';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { clearFetch } from '../../redux/navbar/HeroSlice';
 
 const OtherInfo = () => {
   const { heroDetails } = useSelector((state) => state.fetchHero);
+  const history = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleClearFetch = () => {
+    history(-1);
+    dispatch(clearFetch());
+  };
 
   return (
     <div className="ot-wrapper">
@@ -110,6 +119,10 @@ const OtherInfo = () => {
           <IoCaretForwardOutline className="bk-btn" />
         </a>
       </div>
+      <button type="button" className="bk-box btn-left" onClick={() => handleClearFetch()}>
+        <IoCaretBackOutline className="bk-btn" />
+        <span className="bk-to-srch">Back</span>
+      </button>
     </div>
   );
 };

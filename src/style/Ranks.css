@@ -34,11 +34,21 @@
 .term-selector {
   background-color: rgb(58, 2, 2);
   color: white;
-
-  /* border: none; */
 }
 
 .rank-txt {
   font-size: 1.2vh;
   margin-right: 0.5vh;
+}
+
+@media screen and (max-width: 768px) {
+  .rank-by {
+    top: 5vh;
+    right: 0;
+    font-size: 3vw;
+  }
+
+  .term-selector {
+    font-size: 3vw;
+  }
 }
