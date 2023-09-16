@@ -119,17 +119,18 @@
   padding: 0 1vh;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1420px) {
   .srch-bx {
     padding: 2vw;
   }
-  
+
   .flexx {
     display: grid;
     grid-template-columns: unset;
     grid-template-rows: 1fr 1fr;
     padding: 0 1vh;
   }
+
   .heroDisplay {
     display: block;
     gap: 2vh;
@@ -143,8 +144,7 @@
     font-size: 5vw;
   }
 
-  .hName{
+  .hName {
     font-size: 9vw;
   }
-
 }
