@@ -28,3 +28,9 @@
   background-color: rgba(148, 148, 148, 0.5);
   color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .search-box {
+    margin-top: 5vw;
+  }
+}
