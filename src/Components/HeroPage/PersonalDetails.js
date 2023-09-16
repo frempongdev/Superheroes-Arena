@@ -18,7 +18,7 @@ const PersonalDetails = () => {
     <div className="pd-wrapper">
       {heroDetails?.images?.lg ? <img src={heroDetails?.images?.lg} alt="hero-pic" className="hero-pic" /> : <div className="lds-circle"><div /></div>}
       <h1 className="hero-name">{heroDetails?.name}</h1>
-      <button type="button" className="bk-box" onClick={() => handleClearFetch()}>
+      <button type="button" className="bk-box btn-dwn" onClick={() => handleClearFetch()}>
         <IoCaretBackOutline className="bk-btn" />
         <span className="bk-to-srch">Back</span>
       </button>
