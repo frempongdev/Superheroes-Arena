@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import '../style/HeroCarousel.css';
 
 const HeroCarousel = () => (
-  <div>
+  <div className="all-buttons-box">
     <a href="#search">
       <button type="button" className="hero-button">
         <span />
