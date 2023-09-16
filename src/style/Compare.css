@@ -119,7 +119,7 @@
   padding: 0 1vh;
 }
 
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1200px) {
   .srch-bx {
     padding: 2vw;
   }
