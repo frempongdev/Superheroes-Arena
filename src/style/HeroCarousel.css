@@ -128,3 +128,12 @@
     transform: translateY(100%);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .all-buttons-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
